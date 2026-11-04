@@ -1,0 +1,44 @@
+{
+  "name": "modern-pomodoro-timer",
+  "title": "Modern Pomodoro Timer",
+  "description": "A sleek, dark-themed Pomodoro timer application featuring customizable intervals, audio alerts, and session tracking.",
+  "techStack": {
+    "frontend": "HTML5 / TailwindCSS / Vanilla JavaScript",
+    "backend": "Node.js (Express)",
+    "database": "In-memory / LocalStorage"
+  },
+  "folderStructure": [
+    "server/index.js",
+    "public/index.html",
+    "public/styles.css",
+    "public/script.js",
+    "public/assets/audio/alert.mp3",
+    "package.json"
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Project Scaffolding",
+      "description": "Initialize package.json and set up the base project directories.",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "title": "Backend Setup",
+      "description": "Create server/index.js to serve static frontend files via Express.",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "title": "Frontend UI Development",
+      "description": "Build the dark-themed user interface using TailwindCSS in public/index.html and styles.css.",
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "title": "Timer & Audio Logic",
+      "description": "Implement countdown timer states, controls, local storage persistence, and Web Audio API alerts in public/script.js.",
+      "status": "pending"
+    }
+  ]
+}
