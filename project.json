@@ -26,7 +26,7 @@
       "id": 2,
       "title": "Backend Setup",
       "description": "Create server/index.js to serve static frontend files via Express.",
-      "status": "pending"
+      "status": "completed"
     },
     {
       "id": 3,
