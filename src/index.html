@@ -1,180 +1,148 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autonomous Dev Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#f0fdf4',
-              500: '#22c55e',
-              600: '#16a34a',
-              950: '#052e16'
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yara - Productivity & Focus Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            850: '#151f32',
+                            950: '#0a0f1d',
+                        }
+                    }
+                }
             }
-          }
         }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="styles.css">
+    </script>
 </head>
-<body class="min-h-screen flex flex-col bg-slate-950 text-slate-100">
-
-  <!-- Top Navigation Bar -->
-  <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <div class="h-9 w-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">
-          ⚡
-        </div>
-        <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
-          AgentWorkspace
-        </span>
-      </div>
-      <div class="flex items-center space-x-4">
-        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-          <span class="w-1.5 h-1.5 mr-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
-          System Active
-        </span>
-        <button class="px-3 py-1.5 text-xs font-medium rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
-          Settings
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content Layout -->
-  <div class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
-    
-    <!-- Sidebar Navigation / Status -->
-    <aside class="space-y-6">
-      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 shadow-sm">
-        <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Navigation</h2>
-        <nav class="space-y-1">
-          <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-            📊 Dashboard
-          </a>
-          <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-lg text-slate-400 hover:bg-slate-800/60 hover:text-slate-200 transition">
-            📁 Project Files
-          </a>
-          <a href="#" class="flex items-center px-3 py-2 text-sm font-medium rounded-lg text-slate-400 hover:bg-slate-800/60 hover:text-slate-200 transition">
-            🧠 Memory Log
-          </a>
-        </nav>
-      </div>
-
-      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 shadow-sm">
-        <h2 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Quick Stats</h2>
-        <div class="space-y-3 text-sm">
-          <div class="flex justify-between">
-            <span class="text-slate-400">Environment</span>
-            <span class="font-mono text-slate-200">Node.js v20</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="text-slate-400">Active Framework</span>
-            <span class="font-mono text-slate-200">Express</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="text-slate-400">Theme</span>
-            <span class="font-mono text-emerald-400">Dark Obsidian</span>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Central Workspace -->
-    <main class="lg:col-span-3 space-y-6">
-      
-      <!-- Welcome Banner -->
-      <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-slate-800 border border-slate-800 rounded-2xl p-6 sm:p-8 relative overflow-hidden">
-        <div class="relative z-10">
-          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
-            Autonomous Agent Dashboard
-          </h1>
-          <p class="text-slate-400 max-w-2xl text-sm sm:text-base">
-            Monitor and manage your autonomous software development lifecycle, inspect memory updates, and review generated project files in real time.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <button class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm rounded-lg shadow-lg shadow-emerald-950 transition">
-              Run Diagnostics
-            </button>
-            <button class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm rounded-lg border border-slate-700 transition">
-              View MEMORY.md
-            </button>
-          </div>
-        </div>
-        <div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-emerald-500/10 to-transparent pointer-events-none"></div>
-      </div>
-
-      <!-- Project Files & Tasks Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        <!-- File Tree / List Card -->
-        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 shadow-sm flex flex-col justify-between">
-          <div>
-            <h3 class="text-base font-semibold text-white mb-1">Project Workspace</h3>
-            <p class="text-xs text-slate-400 mb-4">Active directory contents and structure.</p>
-            <div class="bg-slate-950 rounded-lg p-3 font-mono text-xs text-slate-300 space-y-1 border border-slate-800/80">
-              <div class="text-emerald-400">📁 .git/</div>
-              <div class="text-emerald-400">📁 server/</div>
-              <div class="pl-4 text-slate-400">📄 index.js</div>
-              <div class="text-emerald-400">📁 src/</div>
-              <div class="pl-4 text-slate-400">📄 index.html</div>
-              <div class="pl-4 text-slate-400">📄 styles.css</div>
-              <div class="text-slate-300">📄 package.json</div>
-              <div class="text-slate-300">📄 project.json</div>
-              <div class="text-slate-300">📄 MEMORY.md</div>
-            </div>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-400 flex justify-between items-center">
-            <span>Synced with server</span>
-            <span class="text-emerald-400 font-mono">Ready</span>
-          </div>
-        </div>
-
-        <!-- Recent Activity Log Card -->
-        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 shadow-sm flex flex-col justify-between">
-          <div>
-            <h3 class="text-base font-semibold text-white mb-1">Activity & Events</h3>
-            <p class="text-xs text-slate-400 mb-4">Recent tasks and build operations.</p>
-            <div class="space-y-3">
-              <div class="flex items-start space-x-3 text-xs">
-                <span class="h-2 w-2 mt-1 rounded-full bg-emerald-400 flex-shrink-0"></span>
-                <div>
-                  <p class="font-medium text-slate-200">Frontend UI Development completed</p>
-                  <p class="text-slate-400">TailwindCSS applied with custom dark theme.</p>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950">
+    <!-- Top Header -->
+    <header class="border-b border-slate-800/80 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                    <svg class="w-5 h-5 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
                 </div>
-              </div>
-              <div class="flex items-start space-x-3 text-xs">
-                <span class="h-2 w-2 mt-1 rounded-full bg-blue-400 flex-shrink-0"></span>
-                <div>
-                  <p class="font-medium text-slate-200">Express server initialized</p>
-                  <p class="text-slate-400">Serving static assets from src directory.</p>
-                </div>
-              </div>
+                <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">Yara</span>
             </div>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-800 text-xs text-slate-400 flex justify-between items-center">
-            <span>All systems nominal</span>
-            <span class="text-emerald-400 font-mono">v1.0.0</span>
-          </div>
+
+            <nav class="hidden md:flex items-center space-x-1 bg-slate-900/80 p-1 rounded-xl border border-slate-800">
+                <button class="px-4 py-2 rounded-lg text-sm font-medium bg-slate-800 text-cyan-400 shadow">Timer</button>
+                <button class="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 transition-colors">Analytics</button>
+                <button class="px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 transition-colors">Settings</button>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 transition-all">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </button>
+                <div class="h-8 w-px bg-slate-800"></div>
+                <div class="flex items-center space-x-3 pl-1">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-500 to-indigo-600 flex items-center justify-center font-bold text-sm text-white shadow-md">YN</div>
+                </div>
+            </div>
         </div>
+    </header>
 
-      </div>
+    <!-- Main Workspace -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left Column: Timer & Controls -->
+        <section class="lg:col-span-7 flex flex-col space-y-6">
+            <!-- Timer Card -->
+            <div class="relative overflow-hidden bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-slate-800/80 rounded-3xl p-8 shadow-2xl flex flex-col items-center justify-center text-center">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-slate-800 overflow-hidden">
+                    <div id="timer-progress" class="h-full bg-cyan-500 transition-all duration-1000" style="width: 0%"></div>
+                </div>
 
+                <!-- Mode Selectors -->
+                <div class="flex items-center space-x-2 bg-slate-950/60 p-1.5 rounded-2xl border border-slate-800/80 mb-8">
+                    <button data-mode="pomodoro" class="mode-btn px-4 py-2 rounded-lg text-sm font-medium bg-slate-800 text-cyan-400 shadow">Pomodoro</button>
+                    <button data-mode="shortBreak" class="mode-btn px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 transition-colors">Short Break</button>
+                    <button data-mode="longBreak" class="mode-btn px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 transition-colors">Long Break</button>
+                </div>
+
+                <!-- Time Display -->
+                <div class="my-6 flex items-center justify-center font-mono tracking-tighter text-7xl sm:text-8xl font-bold text-white">
+                    <span id="minutes">25</span>
+                    <span class="text-slate-600 mx-2 animate-pulse">:</span>
+                    <span id="seconds">00</span>
+                </div>
+
+                <!-- Timer Controls -->
+                <div class="flex items-center space-x-4 mt-4">
+                    <button id="start-pause-btn" class="px-8 py-3 rounded-xl font-semibold bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20 transition-all">
+                        Start
+                    </button>
+                    <button id="reset-btn" class="px-5 py-3 rounded-xl font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 border border-slate-700/60 transition-all">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Stats / Motivation -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-5 flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Focus Time</p>
+                        <p class="text-lg font-bold text-white font-mono mt-0.5">1h 25m</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-5 flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Tasks Done</p>
+                        <p class="text-lg font-bold text-white font-mono mt-0.5">3 / 5</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column: Task Manager -->
+        <section class="lg:col-span-5 flex flex-col space-y-6">
+            <div class="bg-slate-950 border border-slate-800/80 rounded-3xl p-6 shadow-xl flex flex-col h-full">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-lg font-bold text-white flex items-center space-x-2">
+                        <span>Tasks</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 font-mono">Focus</span>
+                    </h2>
+                </div>
+
+                <!-- Add Task Input -->
+                <div class="flex items-center space-x-2 mb-6">
+                    <input id="task-input" type="text" placeholder="What are you working on?" class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors">
+                    <button id="add-task-btn" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-4 py-3 rounded-xl text-sm transition-all shadow-md shadow-cyan-500/20">
+                        Add
+                    </button>
+                </div>
+
+                <!-- Task List -->
+                <div id="task-list" class="flex-1 space-y-3 overflow-y-auto max-h-[420px] pr-1">
+                    <!-- Tasks rendered dynamically -->
+                </div>
+            </div>
+        </section>
     </main>
-  </div>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
-    Autonomous Developer Workspace &bull; Built with TailwindCSS & Node.js
-  </footer>
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-900/30 py-4 mt-auto text-center text-xs text-slate-500">
+        Yara Productivity Suite &bull; Stay Focused, Accomplish More
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
