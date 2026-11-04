@@ -1,12 +1,12 @@
 {
   "name": "yara-mw1yxcue",
   "version": "1.0.0",
-  "description": "Autonomous project scaffolding",
-  "main": "src/index.js",
+  "description": "",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node server/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
