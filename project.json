@@ -38,7 +38,7 @@
       "id": 4,
       "title": "Timer & Audio Logic",
       "description": "Implement countdown timer states, controls, local storage persistence, and Web Audio API alerts in public/script.js.",
-      "status": "pending"
+      "status": "completed"
     }
   ]
 }
